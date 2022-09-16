@@ -3,15 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:es": "eslint --ext .js,.jsx .",
+    "lint:fix": "eslint --fix --ext .js,.jsx .",
+    "dev": "env-cmd -f .env.local next dev",
+    "build": "env-cmd -f .env.local next build",
+    "start": "env-cmd -f .env.local next start",
+    "build:dev": "env-cmd -f .env.dev next build",
+    "start:dev": "env-cmd -f .env.dev next start",
+    "build:prod": "env-cmd -f .env.prod next build",
+    "start:prod": "env-cmd -f .env.prod next start",
+    "export": "env-cmd -f .env.local yarn build && next export -o _static",
+    "export:dev": "env-cmd -f .env.local yarn build && next export -o _static",
+    "export:prod": "env-cmd -f .env.production yarn build && next export -o _static",
+    "clean": "npx rimraf .next out"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "next": "12.3.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-redux": "^8.0.2",
+    "redux": "^4.2.0",
+    "web3": "^1.8.0"
   },
   "devDependencies": {
     "eslint": "8.23.1",

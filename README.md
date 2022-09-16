@@ -1,34 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Getting Started with Create Next App
 
-## Getting Started
+This project was bootstrapped with [Create Next App](https://nextjs.org/learn/basics/create-nextjs-app).
 
-First, run the development server:
+## Available Scripts
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+In the project directory, you can run:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### `yarn dev`
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Runs the app in the development mode.\
+Open [http://localhost:7777](http://localhost:7777) or [0.0.0.0:7777](0.0.0.0:7777) to view it in the browser. or you can change the `PORT` from .env.local file.
+The page will reload automatically if you make changes in code.\
+You will also see any lint errors in the console.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### `yarn build`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Builds the app for **local** to the `.next` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Learn More
+### `yarn start`
 
-To learn more about Next.js, take a look at the following resources:
+When your build is ready, then you need to run your build and for this purpose you will run this command.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### `yarn build:dev`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Builds the app for **development** to the `.next` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Deploy on Vercel
+### `yarn start:dev`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+When your build is ready, then you need to run your build and for this purpose you will run this command.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### `yarn build:prod`
+
+Builds the app for **local** to the `.next` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+### `yarn start:prod`
+
+When your build is ready, then you need to run your build and for this purpose you will run this command.
+
+### Code Splitting
+
+Code is splitted into this pattern:
+1- Pages -> calling the sections from `sections` folder
+2- Sections -> setting up the structure of the page with responsiveness and call the components from `components` Folder
+3- Components -> setting up the the full fledge component or using small shared components from `shared` folder
+
+### Deployment
+
+For deployment Next app on Vercel and other hostings: [https://nextjs.org/learn/basics/deploying-nextjs-app](https://nextjs.org/learn/basics/deploying-nextjs-app)
