@@ -15,7 +15,6 @@
     "start:prod": "env-cmd -f .env.prod next start",
     "export": "env-cmd -f .env.local yarn build && next export -o _static",
     "export:dev": "env-cmd -f .env.local yarn build && next export -o _static",
-    "export:prod": "env-cmd -f .env.production yarn build && next export -o _static",
     "clean": "npx rimraf .next out"
   },
   "dependencies": {
